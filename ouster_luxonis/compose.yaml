@@ -1,0 +1,48 @@
+x-net-config: &net-config
+  network_mode: host
+  ipc: host
+  env_file: ../net.env
+
+services:
+  luxonis:
+    image: husarion/depthai:humble-2.7.4-20230830
+    <<: *net-config
+    restart: unless-stopped
+    volumes:
+      - ./config/camera.yaml:/ros2_ws/install/depthai_ros_driver/share/depthai_ros_driver/config/camera.yaml
+    command: ros2 launch depthai_ros_driver camera.launch.py
+
+  ouster-lidar:
+    image: husarion/ouster:humble-0.10.2-20230831
+    <<: *net-config
+    restart: unless-stopped
+    command: >
+      ros2 launch ouster_ros sensor.composite.launch.xml
+        timestamp_mode:=TIME_FROM_ROS_TIME
+        metadata:=/ouster_metadata.json
+        viz:=false
+        sensor_hostname:=10.15.20.10
+        lidar_mode:=512x10
+        sensor_frame:=ouster_os1_32_link
+
+  foxglove:
+    image: husarion/foxglove:1.84.0
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+    volumes:
+      - ./config/foxglove.json:/foxglove/default-layout.json
+      - ./config/panther_ouster.urdf:/src/panther.urdf
+    environment:
+      - DS_TYPE=foxglove-websocket
+      - DS_PORT=8765
+      - DS_HOST=foxglove-ds
+      - UI_PORT=8080
+      - DISABLE_CACHE=true
+      - DISABLE_INTERACTION=false
+
+  foxglove-ds:
+    image: husarion/foxglove-bridge:humble-add-depthAI
+    <<: *net-config
+    restart: unless-stopped
+    command: ros2 launch foxglove_bridge foxglove_bridge_launch.xml port:=8765 capabilities:=[clientPublish,connectionGraph,assets]

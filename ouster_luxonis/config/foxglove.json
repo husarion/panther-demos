@@ -1,0 +1,366 @@
+{
+  "configById": {
+    "3D!1zudscd": {
+      "cameraState": {
+        "perspective": true,
+        "distance": 6.811232525749151,
+        "phi": 61.44412738545435,
+        "thetaOffset": -45.381214891163474,
+        "targetOffset": [
+          0.4573028634463384,
+          -0.45507893307520103,
+          8.63794577577938e-17
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "followTf": "base_link",
+      "scene": {
+        "transforms": {
+          "showLabel": false,
+          "editable": false
+        }
+      },
+      "transforms": {
+        "frame:base_link": {
+          "visible": false
+        },
+        "frame:body_link": {
+          "visible": false
+        },
+        "frame:cover_link": {
+          "visible": false
+        },
+        "frame:imu_link": {
+          "visible": false
+        },
+        "frame:fl_wheel_link": {
+          "visible": false
+        },
+        "frame:fr_wheel_link": {
+          "visible": false
+        },
+        "frame:rl_wheel_link": {
+          "visible": false
+        },
+        "frame:rr_wheel_link": {
+          "visible": false
+        },
+        "frame:slamtec_rplidar_s1_link": {
+          "visible": false
+        },
+        "frame:laser": {
+          "visible": false
+        },
+        "frame:oak": {
+          "visible": false
+        },
+        "frame:oak-d-base-frame": {
+          "visible": false
+        },
+        "frame:oak_imu_frame": {
+          "visible": false
+        },
+        "frame:oak_left_camera_frame": {
+          "visible": false
+        },
+        "frame:oak_left_camera_optical_frame": {
+          "visible": false
+        },
+        "frame:oak_model_origin": {
+          "visible": false
+        },
+        "frame:oak_rgb_camera_frame": {
+          "visible": false
+        },
+        "frame:oak_rgb_camera_optical_frame": {
+          "visible": false
+        },
+        "frame:oak_right_camera_frame": {
+          "visible": false
+        },
+        "frame:oak_right_camera_optical_frame": {
+          "visible": false
+        },
+        "frame:os_lidar": {
+          "visible": false
+        },
+        "frame:os_imu": {
+          "visible": false
+        },
+        "frame:odom": {
+          "visible": false
+        },
+        "frame:front_light_link": {
+          "visible": false
+        },
+        "frame:rear_light_link": {
+          "visible": false
+        },
+        "frame:ouster_os1_32_link": {
+          "visible": false
+        },
+        "frame:front_bumper_link": {
+          "visible": false
+        },
+        "frame:rear_bumper_link": {
+          "visible": false
+        }
+      },
+      "topics": {
+        "/ouster/scan": {
+          "visible": false,
+          "colorField": "intensity",
+          "colorMode": "colormap",
+          "colorMap": "turbo"
+        },
+        "/ouster/points": {
+          "visible": true,
+          "colorField": "_auto_distance",
+          "colorMode": "colormap",
+          "colorMap": "rainbow",
+          "pointShape": "circle",
+          "maxValue": 30,
+          "pointSize": 2
+        },
+        "/oak/rgb/image_raw": {
+          "visible": false
+        },
+        "/panther/lights/driver/front_panel_frame": {
+          "visible": false
+        },
+        "/lights/driver/front_panel_frame": {
+          "visible": false
+        },
+        "/lights/driver/rear_panel_frame": {
+          "visible": false
+        }
+      },
+      "layers": {
+        "b1115faf-0465-4daa-9b14-902aa3c8f7ad": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "URDF",
+          "instanceId": "b1115faf-0465-4daa-9b14-902aa3c8f7ad",
+          "layerId": "foxglove.Urdf",
+          "url": "http://10.15.20.3:8080/panther.urdf",
+          "order": 1
+        }
+      },
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {},
+      "foxglovePanelTitle": "Panther LIDAR Perception"
+    },
+    "Image!16hcrhe": {
+      "cameraState": {
+        "distance": 20,
+        "perspective": true,
+        "phi": 60,
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "thetaOffset": 45,
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {},
+      "topics": {},
+      "layers": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {
+        "imageTopic": "/lights/driver/front_panel_frame"
+      },
+      "foxglovePanelTitle": "Front Light Bar"
+    },
+    "Image!3mk9x3e": {
+      "cameraState": {
+        "distance": 20,
+        "perspective": true,
+        "phi": 60,
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "thetaOffset": 45,
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {},
+      "topics": {},
+      "layers": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {
+        "imageTopic": "/lights/driver/rear_panel_frame"
+      },
+      "foxglovePanelTitle": "Rear Light Bar"
+    },
+    "Image!2e096ah": {
+      "cameraState": {
+        "distance": 20,
+        "perspective": true,
+        "phi": 60,
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "thetaOffset": 45,
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {
+        "frame:oak_rgb_camera_optical_frame": {
+          "visible": false
+        }
+      },
+      "topics": {},
+      "layers": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {
+        "imageTopic": "/oak/rgb/image_raw/compressed",
+        "synchronize": false,
+        "rotation": 0,
+        "annotations": {},
+        "colorMode": "gradient",
+        "calibrationTopic": "/oak/rgb/camera_info"
+      },
+      "foxglovePanelTitle": "Camera View"
+    },
+    "Plot!1g3xy7v": {
+      "paths": [
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/battery.percentage",
+          "enabled": true,
+          "showLine": false,
+          "label": "Battery percentage"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240,
+      "foxglovePanelTitle": "Panther Battery Level",
+      "minYValue": 0,
+      "maxYValue": 1
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": {
+    "direction": "row",
+    "first": {
+      "first": "3D!1zudscd",
+      "second": {
+        "first": "Image!16hcrhe",
+        "second": "Image!3mk9x3e",
+        "direction": "column",
+        "splitPercentage": 52.77777777777778
+      },
+      "direction": "column",
+      "splitPercentage": 87.95045045045045
+    },
+    "second": {
+      "first": "Image!2e096ah",
+      "second": "Plot!1g3xy7v",
+      "direction": "column"
+    }
+  }
+}
