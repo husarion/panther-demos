@@ -1,2 +1,3 @@
 # panther-demos
-Docker based demo setups for Panther
+
+Docker-based demo setups for Panther
