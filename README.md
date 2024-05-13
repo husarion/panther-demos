@@ -47,15 +47,15 @@ Panther with Ouster LiDAR and Luxonis camera visualized in Foxglove.
 
    1. Go to the demo directory of your choice
 
-    ```bash
-    cd <demo_directory>
-    ```
+        ```bash
+        cd <demo_directory>
+        ```
 
    1. Run demo with docker containers
 
-    ```bash
-    docker compose up
-    ```
+        ```bash
+        docker compose up
+        ```
 
 1. Open visualization.
 
