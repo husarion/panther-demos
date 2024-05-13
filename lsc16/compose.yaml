@@ -6,6 +6,7 @@ x-net-config: &net-config
 services:
   lsc16-lidar:
     build:
+      context: .
       dockerfile: Dockerfile
     <<: *net-config
     restart: unless-stopped

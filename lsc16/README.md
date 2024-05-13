@@ -35,12 +35,15 @@
     docker compose up
     ```
 
-1. Open visualization.
+    *Note: Compose file uses locally built docker image. The building is started, once `docker compose up` command is executed.*
+
+2. Open visualization.
 
     On your computer:
 
     ```bash
     cd lsc16
+    xhost local:root
     docker compose -f compose.rviz.yaml up
     ```
 
