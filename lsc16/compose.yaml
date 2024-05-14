@@ -10,6 +10,8 @@ services:
       dockerfile: Dockerfile
     <<: *net-config
     restart: unless-stopped
+    environment:
+      - FASTDDS_BUILTIN_TRANSPORTS=LARGE_DATA
     volumes:
       - ./config/lslidar_c16.yaml:/ros_ws/src/Lslidar_ROS2_driver/lslidar_driver/params/lslidar_c16.yaml
       - ./config/lslidar_c16_launch.py:/ros_ws/src/Lslidar_ROS2_driver/lslidar_driver/launch/lslidar_c16_launch.py
