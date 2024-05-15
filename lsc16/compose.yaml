@@ -1,0 +1,26 @@
+x-net-config: &net-config
+  network_mode: host
+  ipc: host
+  env_file: ../net.env
+
+services:
+  lsc16-lidar:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    <<: *net-config
+    volumes:
+      - ./config/lslidar_c16.yaml:/ros_ws/src/Lslidar_ROS2_driver/lslidar_driver/params/lslidar_c16.yaml
+      - ./config/lslidar_c16_launch.py:/ros_ws/src/Lslidar_ROS2_driver/lslidar_driver/launch/lslidar_c16_launch.py
+    command: ros2 launch lslidar_driver lslidar_c16_launch.py
+
+  rviz:
+    image: husarion/rviz2:humble-11.2.11-20240320
+    <<: *net-config
+    environment:
+      - DISPLAY=${DISPLAY}
+      - XDG_RUNTIME_DIR=/tmp/runtime-root
+      - LIBGL_ALWAYS_SOFTWARE=1
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ./config/default.rviz:/root/.rviz2/default.rviz
