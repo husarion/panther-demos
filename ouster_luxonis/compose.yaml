@@ -7,7 +7,6 @@ services:
   luxonis:
     image: husarion/depthai:humble-2.7.4-20230830
     <<: *net-config
-    restart: unless-stopped
     volumes:
       - ./config/camera.yaml:/ros2_ws/install/depthai_ros_driver/share/depthai_ros_driver/config/camera.yaml
     command: ros2 launch depthai_ros_driver camera.launch.py
@@ -15,7 +14,6 @@ services:
   ouster-lidar:
     image: husarion/ouster:humble-0.10.2-20230831
     <<: *net-config
-    restart: unless-stopped
     command: >
       ros2 launch ouster_ros sensor.composite.launch.xml
         timestamp_mode:=TIME_FROM_ROS_TIME
@@ -27,7 +25,6 @@ services:
 
   foxglove:
     image: husarion/foxglove:1.84.0
-    restart: unless-stopped
     ports:
       - 8080:8080
     volumes:
@@ -44,5 +41,4 @@ services:
   foxglove-ds:
     image: husarion/foxglove-bridge:humble-add-depthAI
     <<: *net-config
-    restart: unless-stopped
     command: ros2 launch foxglove_bridge foxglove_bridge_launch.xml port:=8765 capabilities:=[clientPublish,connectionGraph,assets]
