@@ -23,7 +23,7 @@
 1. Run demo.
 
     ```bash
-    cd ouster_luxonis
+    cd panther-demos/ouster_luxonis/
     docker compose up
     ```
 

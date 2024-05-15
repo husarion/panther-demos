@@ -10,7 +10,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN git clone -b C16_V3.0 https://github.com/Lslidar/Lslidar_ROS2_driver.git ./src/Lslidar_ROS2_driver
 
-RUN apt update && \
+RUN apt-get update && apt-get install -y \
+    ros-${ROS_DISTRO}-rmw-cyclonedds-cpp && \
   source /opt/ros/${ROS_DISTRO}/setup.bash && \
   rosdep update --rosdistro $ROS_DISTRO && \
   rosdep install -i --from-path src --rosdistro $ROS_DISTRO \

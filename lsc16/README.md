@@ -20,23 +20,15 @@
 
 ### Running
 
-**Important!** The below steps assume that [Husarion OS](https://husarion.com/software/os/) is installed on NUC and a remote desktop is started. If no, please refer to the articles:
+**Important!** The below steps assume that [Husarion OS](https://husarion.com/software/os/) is installed on NUC. Otherwise, please follow the [installation](https://husarion.com/software/os/installation/) steps.
 
-- [Installation](https://husarion.com/software/os/installation/)
-- [Remote Desktop](https://husarion.com/software/os/remote-desktop/)
+1. Share and access the NUC's remote desktop referring to [Remote Desktop](https://husarion.com/software/os/remote-desktop/) setup instructions.
 
 1. Run demo.
 
     ```bash
-    cd lsc16
-    xhost local:root
-    docker compose up
+    cd panther-demos/lsc16/
+    docker compose up -d
     ```
 
     *Note: Compose file uses locally built docker image. The building is started, once `docker compose up` command is executed.*
-
-2. Open visualization.
-
-   1. Using the open browser on your computer, connect to the address [`10.15.20.3:8080`](http://10.15.20.3:8080/).
-   2. Login to the session if the password is requested
-   3. Rviz window with a default config will be displayed.
