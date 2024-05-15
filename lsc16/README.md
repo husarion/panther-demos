@@ -4,12 +4,6 @@
 
 ### Configuration
 
-1. Clone this repository on your computer.
-
-      ```bash
-    git clone https://github.com/husarion/panther-demos.git
-    ```
-
 1. Connect to the Panther's WiFi network, and open an SSH session on the NUC.
   
     ```bash
@@ -28,23 +22,16 @@
 
 1. Run demo.
 
-    On the Panther robot:
-
     ```bash
     cd lsc16
+    xhost local:root
     docker compose up
     ```
 
     *Note: Compose file uses locally built docker image. The building is started, once `docker compose up` command is executed.*
 
-2. Open visualization.
+1. Open visualization.
 
-    On your computer:
-
-    ```bash
-    cd lsc16
-    xhost local:root
-    docker compose -f compose.rviz.yaml up
-    ```
-
-    *Note: It's recommended to establish a wired connection between the computer and the Panther robot. Communication via WiFi may result in large packets dropping.*
+   1. Using the open browser on your computer, connect to the address [`10.15.20.3:8080`](http://10.15.20.3:8080/).
+   1. Login to the session if the password is requested
+   1. Rviz window with a default config will be displayed.
