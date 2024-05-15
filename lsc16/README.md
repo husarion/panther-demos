@@ -20,6 +20,11 @@
 
 ### Running
 
+**Important!** The below steps assume that [Husarion OS](https://husarion.com/software/os/) is installed on NUC and a remote desktop is started. If no, please refer to the articles:
+
+- [Installation](https://husarion.com/software/os/installation/)
+- [Remote Desktop](https://husarion.com/software/os/remote-desktop/)
+
 1. Run demo.
 
     ```bash
@@ -30,8 +35,8 @@
 
     *Note: Compose file uses locally built docker image. The building is started, once `docker compose up` command is executed.*
 
-1. Open visualization.
+2. Open visualization.
 
    1. Using the open browser on your computer, connect to the address [`10.15.20.3:8080`](http://10.15.20.3:8080/).
-   1. Login to the session if the password is requested
-   1. Rviz window with a default config will be displayed.
+   2. Login to the session if the password is requested
+   3. Rviz window with a default config will be displayed.
