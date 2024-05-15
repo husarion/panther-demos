@@ -1,5 +1,7 @@
 # ouster_luxonis
 
+Panther with Ouster LiDAR and Luxonis camera visualized in Foxglove.
+
 ## How to use
 
 ### Configuration

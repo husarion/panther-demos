@@ -1,5 +1,7 @@
 # lsc16
 
+Panther with LSLIDAR C16 visualized in Rviz2.
+
 ## How to use
 
 ### Configuration
