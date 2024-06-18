@@ -1,0 +1,42 @@
+x-common-config:
+  &common-config
+  network_mode: host
+  ipc: host
+
+x-cpu-config: &cpu-config
+  env_file: .env.cpu
+
+x-gpu-config: &gpu-config
+  runtime: nvidia
+  env_file: .env.gpu
+
+services:
+  panther_gazebo:
+    image: husarion/panther-gazebo:humble-2.0.3-20240606
+    container_name: panther_gazebo
+    <<:
+      - *common-config
+      - *gpu-config
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    command: >
+      ros2 launch panther_gazebo simulation.launch.py
+
+  foxglove:
+    image: husarion/foxglove:1.84.0
+    ports:
+      - 8080:8080
+      - 8765:8765
+    volumes:
+      - ./config/layout.json:/foxglove/default-layout.json
+    environment:
+      - DS_TYPE=foxglove-websocket
+      - DS_PORT=8765
+      - DS_HOST=foxglove-ds
+      - UI_PORT=8080
+      - DISABLE_CACHE=true
+      - DISABLE_INTERACTION=false
+
+  foxglove-ds:
+    image: husarion/foxglove-bridge:humble-0.7.3-20240108
+    command: ros2 launch foxglove_bridge foxglove_bridge_launch.xml port:=8765 capabilities:=[clientPublish,connectionGraph,assets]

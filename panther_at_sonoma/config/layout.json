@@ -1,0 +1,18 @@
+{
+    "configById": {
+      "map!133cls1": {
+        "customTileUrl": "",
+        "disabledTopics": [],
+        "followTopic": "",
+        "layer": "map",
+        "topicColors": {},
+        "maxNativeZoom": 18
+      }
+    },
+    "globalVariables": {},
+    "userNodes": {},
+    "playbackConfig": {
+      "speed": 1
+    },
+    "layout": "map!133cls1"
+  }
