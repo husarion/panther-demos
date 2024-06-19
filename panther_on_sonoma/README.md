@@ -1,6 +1,6 @@
-# Panther At Sonoma Raceway
+# Panther On Sonoma Raceway
 
-This demo simulates Panther robot in Gazebo at Sonoma Raceway.
+This demo simulates Panther robot in Gazebo on Sonoma Raceway.
 
 ## How to use
 
@@ -13,7 +13,7 @@ This demo simulates Panther robot in Gazebo at Sonoma Raceway.
 2. Run demo.
 
     ```bash
-    cd panther-demos/panther_at_sonoma/
+    cd panther-demos/panther_on_sonoma/
     xhost +local:docker
     docker compose up
     ```

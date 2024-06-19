@@ -12,15 +12,21 @@ x-gpu-config: &gpu-config
 
 services:
   panther_gazebo:
-    image: husarion/panther-gazebo:humble-at-sonoma
+    image: husarion/panther-gazebo:humble-on-sonoma
     container_name: panther_gazebo
     <<:
       - *common-config
       - *gpu-config
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ./config/components.yaml:/config/components.yaml
     command: >
       ros2 launch panther_gazebo simulation.launch.py
+        components_config_path:=/config/components.yaml
+        ekf_configuration:=global
+        gz_world:=/ros2_ws/src/husarion_gz_worlds/worlds/sonoma_raceway.sdf
+        namespace:=panther
+        x:=290 y:=-142 z:=2.5 yaw:=2.55
 
   foxglove:
     image: husarion/foxglove:1.84.0
@@ -39,4 +45,6 @@ services:
 
   foxglove-ds:
     image: husarion/foxglove-bridge:humble-0.7.3-20240108
-    command: ros2 launch foxglove_bridge foxglove_bridge_launch.xml port:=8765 capabilities:=[clientPublish,connectionGraph,assets]
+    command: ros2 launch foxglove_bridge foxglove_bridge_launch.xml
+      port:=8765
+      capabilities:=[clientPublish,connectionGraph,assets]

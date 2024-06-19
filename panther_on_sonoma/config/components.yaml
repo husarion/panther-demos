@@ -1,0 +1,6 @@
+components:
+  - type: ANT02
+    parent_link: cover_link
+    xyz: 0.18 -0.1 0.0
+    rpy: 0.0 0.0 0.0
+    device_namespace: gps
