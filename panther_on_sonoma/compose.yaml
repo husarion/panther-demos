@@ -16,6 +16,10 @@ services:
     <<:
       - *common-config
       - *gpu-config
+    environment:
+      - PANTHER_IMU_ORIENTATION_R=0.0 # Moving on Sonoma caused orientation issue
+      - PANTHER_IMU_ORIENTATION_P=0.0
+      - PANTHER_IMU_ORIENTATION_Y=0.0
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - ./config/components.yaml:/config/components.yaml
