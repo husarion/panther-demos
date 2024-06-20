@@ -13,7 +13,6 @@ x-gpu-config: &gpu-config
 services:
   panther_gazebo:
     image: husarion/panther-gazebo:humble-on-sonoma
-    container_name: panther_gazebo
     <<:
       - *common-config
       - *gpu-config
