@@ -25,8 +25,6 @@ services:
         components_config_path:=/config/components.yaml
         ekf_configuration:=global
         gz_world:=/ros2_ws/src/husarion_gz_worlds/worlds/sonoma_raceway.sdf
-        namespace:=panther
-        x:=290 y:=-142 z:=2.5 yaw:=2.55
 
   foxglove:
     image: husarion/foxglove:1.84.0
