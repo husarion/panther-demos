@@ -3,21 +3,21 @@ x-common-config:
   network_mode: host
   ipc: host
 
-x-cpu-config: &cpu-config
-  env_file: .env.cpu
+x-cpu-display: &cpu-display
+  env_file: .cpu_display.env
 
-x-gpu-config: &gpu-config
+x-gpu-display: &gpu-display
   runtime: nvidia
-  env_file: .env.gpu
+  env_file: .gpu_display.env
 
 services:
   panther_gazebo:
     image: husarion/panther-gazebo:humble-on-sonoma
     <<:
       - *common-config
-      - *gpu-config
+      - *gpu-display
     environment:
-      - PANTHER_IMU_ORIENTATION_R=0.0 # Moving on Sonoma caused orientation issue
+      - PANTHER_IMU_ORIENTATION_R=0.0 # IMU is roataded on Sonoma world what caused orientation issue
       - PANTHER_IMU_ORIENTATION_P=0.0
       - PANTHER_IMU_ORIENTATION_Y=0.0
     volumes:
@@ -26,8 +26,10 @@ services:
     command: >
       ros2 launch panther_gazebo simulation.launch.py
         components_config_path:=/config/components.yaml
-        ekf_configuration:=global
+        fuse_gps:=True
         gz_world:=/ros2_ws/src/husarion_gz_worlds/worlds/sonoma_raceway.sdf
+        localization_mode:=enu
+        namespace:=panther
 
   foxglove:
     image: husarion/foxglove:1.84.0

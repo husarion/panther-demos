@@ -1,4 +1,4 @@
-# Panther On Sonoma Raceway
+# Sonoma Raceway Simulation
 
 This demo simulates Panther robot in Gazebo on Sonoma Raceway.
 
