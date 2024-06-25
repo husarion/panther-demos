@@ -4,13 +4,19 @@ This demo simulates Panther robot in Gazebo on Sonoma Raceway.
 
 ## How to use
 
-1. Clone repository
+### Configuration
+
+1. Clone this repository on your PC.
 
     ```bash
     git clone https://github.com/husarion/panther-demos.git
     ```
 
-2. Run demo.
+2. [OPTIONAL] If your system does not have a GPU, modify the display configuration for the simulator by editing [compose.yaml](compose.yaml). Change the setting from `gpu-display` to `cpu-display` to ensure compatibility.
+
+### Running
+
+1. Run demo.
 
     ```bash
     cd panther-demos/panther_on_sonoma/
@@ -18,6 +24,4 @@ This demo simulates Panther robot in Gazebo on Sonoma Raceway.
     docker compose up
     ```
 
-3. Open visualization.
-
-   Type http://localhost:8080/ui in Chrome Browser.
+    *Note: This demo shouldn't be launched on real robot.*
