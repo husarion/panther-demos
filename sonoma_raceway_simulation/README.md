@@ -19,9 +19,11 @@ The demo, by simulating a real Sonoma raceway, allows you to test the operation 
 1. Run demo.
 
     ```bash
-    cd panther-demos/panther_on_sonoma/
+    cd panther-demos/sonoma_raceway_simulation/
     xhost +local:docker
     docker compose up
     ```
 
     *Note: This demo shouldn't be launched on a real robot.*
+
+2. Open Foxglove visualization http://localhost:8080/ui

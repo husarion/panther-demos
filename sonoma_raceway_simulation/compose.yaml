@@ -12,7 +12,7 @@ x-gpu-display: &gpu-display
 
 services:
   panther_gazebo:
-    image: husarion/panther-gazebo:humble-sonoma
+    image: husarion/panther-gazebo:humble-sonoma-sim
     <<:
       - *common-config
       - *gpu-display
@@ -47,7 +47,8 @@ services:
       - DISABLE_INTERACTION=false
 
   foxglove-ds:
-    image: husarion/foxglove-bridge:humble-0.7.3-20240108
-    command: ros2 launch foxglove_bridge foxglove_bridge_launch.xml
-      port:=8765
-      capabilities:=[clientPublish,connectionGraph,assets]
+    image: husarion/foxglove-bridge:humble-0.7.7-20240626
+    command: >
+      ros2 launch foxglove_bridge foxglove_bridge_launch.xml
+        port:=8765
+        capabilities:=[clientPublish,connectionGraph,assets]
