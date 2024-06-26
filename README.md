@@ -25,3 +25,15 @@ Panther with Ouster LiDAR and Luxonis camera visualized in Foxglove.
 | Foxglove bridge | -                 | [foxglove-bridge:humble-add-depthAI](https://hub.docker.com/layers/husarion/foxglove-bridge/humble-add-depthAI/images/sha256-b89941f0332e0b29049db0eb78ad732dfeadd7c42d94d5b0c7cbb87f3a24088d?context=explore) |
 
 *Note: Refer to a dedicated [readme](./ouster_luxonis/README.md) file for more information on how to use the demo.*
+
+## sonoma_raceway_simulation
+
+The demo, by simulating a real Sonoma Raceway, allows you to test the operation of data fusion with GPS.
+
+| Component        | Docker image                                                                                    |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| Gazebo simulator | [panther-gazebo:humble-on-sonoma](https://hub.docker.com/r/husarion/panther-gazebo)             |
+| Foxglove         | [foxglove:1.84.0](https://hub.docker.com/layers/husarion/foxglove)                              |
+| Foxglove bridge  | [foxglove-bridge:humble-0.7.3-20240108](https://hub.docker.com/layers/husarion/foxglove-bridge) |
+
+*Note: Refer to a dedicated [readme](./sonoma_raceway_simulation/README.md) file for more information on how to use the demo.*

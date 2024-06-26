@@ -1,0 +1,246 @@
+{
+  "configById": {
+    "map!133cls1": {
+      "customTileUrl": "",
+      "disabledTopics": [],
+      "followTopic": "",
+      "layer": "map",
+      "topicColors": {},
+      "maxNativeZoom": 18,
+      "center": {
+        "lat": 38.162146570971096,
+        "lon": -122.45697133374715
+      },
+      "zoomLevel": 16
+    },
+    "3D!1rlmnvx": {
+      "cameraState": {
+        "perspective": true,
+        "distance": 9.265824603194972,
+        "phi": 59.99999999999988,
+        "thetaOffset": 45.000000000000036,
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {
+        "transforms": {
+          "editable": false,
+          "showLabel": true,
+          "labelSize": 0.14,
+          "lineWidth": 2,
+          "axisScale": 2.5
+        }
+      },
+      "transforms": {
+        "frame:panther/base_link": {
+          "visible": true
+        },
+        "frame:panther/odom": {
+          "visible": true
+        },
+        "frame:panther/gps": {
+          "visible": false
+        },
+        "frame:panther/gps_mounting_point": {
+          "visible": false
+        },
+        "frame:panther/body_link": {
+          "visible": false
+        },
+        "frame:panther/cover_link": {
+          "visible": false
+        },
+        "frame:panther/front_bumper_link": {
+          "visible": false
+        },
+        "frame:panther/imu_link": {
+          "visible": false
+        },
+        "frame:panther/rear_bumper_link": {
+          "visible": false
+        },
+        "frame:panther/front_light_link": {
+          "visible": false
+        },
+        "frame:panther/rear_light_link": {
+          "visible": false
+        },
+        "frame:panther/fl_wheel_link": {
+          "visible": false
+        },
+        "frame:panther/fr_wheel_link": {
+          "visible": false
+        },
+        "frame:panther/rl_wheel_link": {
+          "visible": false
+        },
+        "frame:panther/rr_wheel_link": {
+          "visible": false
+        },
+        "frame:base_link": {
+          "visible": false
+        },
+        "frame:body_link": {
+          "visible": false
+        },
+        "frame:imu_link": {
+          "visible": false
+        },
+        "frame:front_bumper_link": {
+          "visible": false
+        },
+        "frame:front_light_link": {
+          "visible": false
+        },
+        "frame:rear_bumper_link": {
+          "visible": false
+        },
+        "frame:rear_light_link": {
+          "visible": false
+        },
+        "frame:cover_link": {
+          "visible": false
+        },
+        "frame:fl_wheel_link": {
+          "visible": false
+        },
+        "frame:fr_wheel_link": {
+          "visible": false
+        },
+        "frame:rl_wheel_link": {
+          "visible": false
+        },
+        "frame:rr_wheel_link": {
+          "visible": false
+        },
+        "frame:gps_mounting_point": {
+          "visible": false
+        },
+        "frame:gps": {
+          "visible": false
+        },
+        "frame:pantherbase_link": {
+          "visible": false
+        },
+        "frame:pantherbody_link": {
+          "visible": false
+        },
+        "frame:pantherimu_link": {
+          "visible": false
+        },
+        "frame:pantherfront_bumper_link": {
+          "visible": false
+        },
+        "frame:pantherfront_light_link": {
+          "visible": false
+        },
+        "frame:pantherrear_bumper_link": {
+          "visible": false
+        },
+        "frame:pantherrear_light_link": {
+          "visible": false
+        },
+        "frame:panthercover_link": {
+          "visible": false
+        },
+        "frame:pantherfl_wheel_link": {
+          "visible": false
+        },
+        "frame:pantherfr_wheel_link": {
+          "visible": false
+        },
+        "frame:pantherrl_wheel_link": {
+          "visible": false
+        },
+        "frame:pantherrr_wheel_link": {
+          "visible": false
+        },
+        "frame:panthergps_mounting_point": {
+          "visible": false
+        },
+        "frame:panthergps": {
+          "visible": false
+        }
+      },
+      "topics": {},
+      "layers": {
+        "5bfd094d-4c31-4c29-ac82-0d23daf8b40f": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "URDF",
+          "instanceId": "5bfd094d-4c31-4c29-ac82-0d23daf8b40f",
+          "layerId": "foxglove.Urdf",
+          "sourceType": "topic",
+          "url": "",
+          "filePath": "",
+          "parameter": "",
+          "topic": "/panther/robot_description",
+          "framePrefix": "panther/",
+          "displayMode": "auto",
+          "fallbackColor": "#ffffff",
+          "order": 1
+        },
+        "3f9279d7-d7c3-4100-9671-87fc0b73f23e": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "Grid",
+          "instanceId": "3f9279d7-d7c3-4100-9671-87fc0b73f23e",
+          "layerId": "foxglove.Grid",
+          "size": 10,
+          "divisions": 10,
+          "lineWidth": 1,
+          "color": "#248eff",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "order": 2
+        }
+      },
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {}
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": {
+    "direction": "row",
+    "first": "3D!1rlmnvx",
+    "second": "map!133cls1"
+  }
+}
