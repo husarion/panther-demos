@@ -1,6 +1,6 @@
 # Sonoma Raceway Simulation
 
-This demo simulates Panther robot in Gazebo on Sonoma Raceway.
+The demo, by simulating a real Sonoma raceway, allows you to test the operation of data fusion with GPS.
 
 ## How to use
 
@@ -24,4 +24,4 @@ This demo simulates Panther robot in Gazebo on Sonoma Raceway.
     docker compose up
     ```
 
-    *Note: This demo shouldn't be launched on real robot.*
+    *Note: This demo shouldn't be launched on a real robot.*

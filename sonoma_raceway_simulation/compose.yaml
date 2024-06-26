@@ -12,7 +12,7 @@ x-gpu-display: &gpu-display
 
 services:
   panther_gazebo:
-    image: husarion/panther-gazebo:humble-on-sonoma
+    image: husarion/panther-gazebo:humble-sonoma
     <<:
       - *common-config
       - *gpu-display

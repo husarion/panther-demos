@@ -28,7 +28,7 @@ Panther with Ouster LiDAR and Luxonis camera visualized in Foxglove.
 
 ## sonoma_raceway_simulation
 
-A demo allowing you to simulate test the robot with configured GPS on Sonoma Raceway.
+The demo, by simulating a real Sonoma Raceway, allows you to test the operation of data fusion with GPS.
 
 | Component        | Docker image                                                                                    |
 | ---------------- | ----------------------------------------------------------------------------------------------- |
