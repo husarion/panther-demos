@@ -1,0 +1,33 @@
+x-common-config:
+  &common-config
+  network_mode: host
+  ipc: host
+
+x-cpu-display: &cpu-display
+  env_file: .cpu_display.env
+
+x-gpu-display: &gpu-display
+  runtime: nvidia
+  env_file: .gpu_display.env
+
+
+services:
+  panther_gazebo:
+    image: husarion/panther-gazebo:humble-2.1.2-20241125
+    volumes:
+      - ./config/components.yaml:/config/components.yaml
+    command: >
+      ros2 launch panther_description load_urdf.launch.py
+        components_config_path:=/config/components.yaml
+        add_wheel_joints:=True
+  rviz2:
+    image: husarion/panther-gazebo:humble-ros2-devel-tag-test
+    <<:
+      - *gpu-display
+
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ./config/components.yaml:/config/components.yaml
+      - ./config/viz.rviz:/config/viz.rviz
+    command: >
+      ros2 launch panther_description rviz.launch.py rviz_config:=/config/viz.rviz
