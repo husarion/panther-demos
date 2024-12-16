@@ -1,6 +1,6 @@
 # Customize Panther Robot with ROS2 and Docker
 
-This guide explains how to customize the Panther robot using `ros2` and Docker with components from the [husarion/ros_components_description](https://github.com/husarion/ros_components_description) repository.
+This guide explains how to customize the Panther robot using `ros2` and Docker with components from the [husarion/ros_components_description](https://github.com/husarion/ros_components_description) repository. 
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ Components available for use can be found in the `gz_components.launch.py` file 
 
 - [Available Components](https://github.com/husarion/ros_components_description/blob/ros2/launch/gz_components.launch.py#L66)
 
-Review the available components to decide which ones to use in your configuration.
+Review the available components to decide which ones to use in your configuration. To learn more about each component visit the [Panther Configuration Options manual page](https://husarion.com/manuals/panther/panther-options/). 
 
 ## Steps to Customize the Panther
 
