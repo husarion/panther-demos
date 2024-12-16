@@ -57,5 +57,9 @@ In this example:
 Use the following command to launch the configuration in the rviz2 Docker container:
 
 ```bash
-docker compose exec rviz2 bash -c "source install/setup.bash && ros2 launch /ros2_ws/src/panther_ros/panther_description/launch/overwrite_robot_description.launch.py components_config_path:=/config/components.yaml"
+docker compose restart panther_gazebo
 ```
+
+<!-- ```bash
+docker compose exec rviz2 bash -c "source install/setup.bash && ros2 launch /ros2_ws/src/panther_ros/panther_description/launch/overwrite_robot_description.launch.py components_config_path:=/config/components.yaml"
+``` -->
