@@ -12,7 +12,7 @@ services:
     volumes:
       - ./config/lslidar_c16.yaml:/ros_ws/src/Lslidar_ROS2_driver/lslidar_driver/params/lslidar_c16.yaml
       - ./config/lslidar_c16_launch.py:/ros_ws/src/Lslidar_ROS2_driver/lslidar_driver/launch/lslidar_c16_launch.py
-    command: ros2 launch lslidar_driver lslidar_c16_launch.py
+    command: ros2 launch lslidar_driver lslidar_cx_launch.py
 
   rviz:
     image: husarion/rviz2:humble-11.2.11-20240320
