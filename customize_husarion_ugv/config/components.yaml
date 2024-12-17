@@ -1,50 +1,38 @@
 # By default panther is loaded without any components.
 
 components:
-  - type: LDR20
-    parent_link: fl_wheel_link
-    xyz: 0.0 0.1 0.0
+
+  - type: WCH02 # Ouster OS1-64
+    parent_link: cover_link
+    xyz: 0.0 0.0 0.0
     rpy: 0.0 0.0 0.0
     device_namespace: fl
-  - type: LDR20
-    parent_link: rl_wheel_link
-    xyz: 0.0 0.5 0.0
+
+  - type: LDR14 # Ouster OS1-64
+    parent_link: cover_link
+    xyz: 0.0 0.0 0.0
     rpy: 0.0 0.0 0.0
-    device_namespace: rl
-  - type: LDR20
-    parent_link: fr_wheel_link
-    xyz: 0.0 -0.1 0.0
-    rpy: 0.0 0.0 0.0
-    device_namespace: fr
-  - type: LDR20
-    parent_link: rr_wheel_link
-    xyz: 0.0 -0.2 0.0
-    rpy: 0.0 0.0 0.0
-    device_namespace: rr
-  - type: CAM01
+    device_namespace: fl
+
+  - type: CAM04 # Stereolabs ZED 2i
     parent_link: cover_link
     xyz: 0.0 0.0 0.5
     rpy: 0.0 0.0 0.0
     device_namespace: astra
 
-  - type: CAM01
+  - type: CAM04 # Stereolabs ZED 2i
     parent_link: ur5_tool0
     xyz: 0.0 0.05 0.0
     rpy: -1.57 -1.57 0.0
     device_namespace: manip_cam
 
-  - type: MAN02
+  - type: MAN02 # Universal Robots UR5e
     parent_link: cover_link
     xyz: 0.2 -0.2 0.0
     rpy: 0.0 0.0 0.0
     device_namespace: ur5
 
-  - type: MAN04
-    parent_link: cover_link
-    xyz: -0.2 -0.2 0.0
-    rpy: 0.0 0.0 0.0
-    device_namespace: kinova1
-  - type: GRP02
+  - type: GRP02 # Robotiq 2F-85
     parent_link: ur5_tool0
     xyz: 0.0 0.0 0.0
     rpy: 0.0 0.0 0.0

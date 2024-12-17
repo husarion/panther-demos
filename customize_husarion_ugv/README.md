@@ -1,6 +1,6 @@
 # Customize Panther Robot with ROS2 and Docker
 
-This guide explains how to customize the Panther robot using `ros2` and Docker with components from the [husarion/ros_components_description](https://github.com/husarion/ros_components_description) repository.
+This guide explains how to customize the Panther robot using `ros2` and Docker with components from the [husarion/ros_components_description](https://github.com/husarion/ros_components_description) repository. 
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ Components available for use can be found in the `gz_components.launch.py` file 
 
 - [Available Components](https://github.com/husarion/ros_components_description/blob/ros2/launch/gz_components.launch.py#L66)
 
-Review the available components to decide which ones to use in your configuration.
+Review the available components to decide which ones to use in your configuration. To learn more about each component visit the [Panther Configuration Options manual page](https://husarion.com/manuals/panther/panther-options/). 
 
 ## Steps to Customize the Panther
 
@@ -57,5 +57,9 @@ In this example:
 Use the following command to launch the configuration in the rviz2 Docker container:
 
 ```bash
-docker compose exec rviz2 bash -c "source install/setup.bash && ros2 launch /ros2_ws/src/panther_ros/panther_description/launch/overwrite_robot_description.launch.py components_config_path:=/config/components.yaml"
+docker compose restart panther_gazebo
 ```
+
+<!-- ```bash
+docker compose exec rviz2 bash -c "source install/setup.bash && ros2 launch /ros2_ws/src/panther_ros/panther_description/launch/overwrite_robot_description.launch.py components_config_path:=/config/components.yaml"
+``` -->
