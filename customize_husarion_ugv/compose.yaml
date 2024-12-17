@@ -12,7 +12,7 @@ x-gpu-display: &gpu-display
 
 
 services:
-  panther_gazebo:
+  husarion_ugv_description:
     image: husarion/panther-gazebo:humble-2.1.2-20241125
     volumes:
       - ./config/components.yaml:/config/components.yaml
@@ -20,6 +20,7 @@ services:
       ros2 launch panther_description load_urdf.launch.py
         components_config_path:=/config/components.yaml
         add_wheel_joints:=True
+
   rviz2:
     image: husarion/panther-gazebo:humble-ros2-devel-tag-test
     <<:
